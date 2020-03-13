@@ -12,7 +12,7 @@ def sent(message):
 
 	if msg[0] == '/':	
 		if path.exists("commands/" + msg[1:].lower() + ".txt"):
-			text = open("commands/" + msg[1:].lower() + ".txt").read()
+			text = open("commands/" + msg[1:].lower() + ".txt", encoding='utf-8').read()
 			bot.send_message(chat, text)
 
 		else:
