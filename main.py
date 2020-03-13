@@ -3,7 +3,7 @@
 import telebot
 from os import path
 
-bot = telebot.TeleBot('961827102:AAGKBTATdCQKrj1ZRu7CJzqcbhg9QQnuO2w')
+bot = telebot.TeleBot('id:token')
 
 @bot.message_handler(content_types=['text'])
 def sent(message):
@@ -16,6 +16,6 @@ def sent(message):
 			bot.send_message(chat, text)
 
 		else:
-			bot.send_message(chat, "Команда отсутствует в нашем реестре, для добавления отпишитесь @over_media")
+			bot.send_message(chat, "Команда отсутствует в нашем реестре, для добавления отпишитесь ...")
 
 bot.polling()
